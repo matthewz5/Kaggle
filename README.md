@@ -27,7 +27,7 @@ The dataset is sourced from [Kaggle - Brazil Real Estate](https://www.kaggle.com
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/brazil-real-estate.git
+   git clone https://github.com/matthewz5/Kaggle-Brasil-real-estate-Data.git
    ```
 2. Install dependencies:
    ```bash
