@@ -11,6 +11,8 @@ The dataset is sourced from [Kaggle - Brazil Real Estate](https://www.kaggle.com
 - **Area**: Size of the property in square meters (`area_m2`).
 - **Price (BRL)**: Target variable representing the property price in Brazilian Reais.
 
+![Real Estate Visualization](data_viz_real_state.jpg)
+
 ## Project Structure
 
 - **Data Preprocessing**: Handling missing values, encoding categorical variables, and feature scaling.
@@ -21,7 +23,26 @@ The dataset is sourced from [Kaggle - Brazil Real Estate](https://www.kaggle.com
 ## Results
 
 - **Linear Regression**: Basic model with limited predictive power (low R² score).
+  - **Training Set**:
+    - **MSE**: 72,896,765,964.67
+    - **R²**: 0.3932
+  - **Test Set**:
+    - **MSE**: 77,714,551,679.86
+    - **R²**: 0.3557
 - **Random Forest**: Improved performance with a higher R² score, indicating better handling of complex relationships.
+  - **Training Set**:
+    - **MSE**: 18,110,755,754.76
+    - **R²**: 0.8492
+  - **Test Set**:
+    - **MSE**: 40,181,566,616.65
+    - **R²**: 0.6669
+
+## Conclusion
+
+- **Random Forest** outperformed **Linear Regression** for predicting property prices, with an R² of **0.6669** on the test set.
+- The features **Area_m2** and **Property_type** were strong predictors, while geographical coordinates (Lat and Lon) added further explanatory power.
+- Further refinement and tuning of the models, along with the addition of more features, could improve the predictive performance. However, the **Random Forest** model currently stands as the best-performing option.
+
 
 ## How to Run
 
@@ -34,12 +55,6 @@ The dataset is sourced from [Kaggle - Brazil Real Estate](https://www.kaggle.com
    pip install -r requirements.txt
    ```
 3. Run the Jupyter notebook or Python scripts to explore data and train models.
-
-## Future Improvements
-
-- **Feature Engineering**: Adding more relevant features to improve model accuracy.
-- **Hyperparameter Tuning**: Optimizing Random Forest parameters for better performance.
-- **Advanced Models**: Experimenting with other algorithms like Gradient Boosting or Neural Networks.
 
 ## Contributing
 
